@@ -1,0 +1,53 @@
+# Binaries
+*.exe
+*.exe~
+*.so
+*.dylib
+*.a
+*.o
+*.out
+
+# Test binary, build with `go test -c`
+*_test.go
+
+# Coverage files
+*.out
+*.cov
+
+# Go workspace files
+go.work
+go.work.sum
+
+# Dependency files
+/vendor/
+
+# Go module files
+*.mod
+*.sum
+
+# Debugging files
+*.log
+*.dbg
+
+# IDEs and editors
+../.idea/
+.vscode/
+*.swp
+*~
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Other temporary files
+*.tmp
+*.temp
