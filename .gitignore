@@ -30,7 +30,7 @@ go.work.sum
 *.dbg
 
 # IDEs and editors
-../.idea/
+.idea/
 .vscode/
 *.swp
 *~
@@ -51,3 +51,6 @@ Thumbs.db
 # Other temporary files
 *.tmp
 *.temp
+
+result.json
+/bin

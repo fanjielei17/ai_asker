@@ -1,4 +1,4 @@
-package main
+package pkg
 
 import (
 	"bufio"
@@ -10,7 +10,8 @@ import (
 	"github.com/sashabaranov/go-openai"
 )
 
-func main() {
+// openai conversation
+func Conv() {
 	// 读取 OpenAI API Key
 	client := openai.NewClient(os.Getenv("OPENAI_API_KEY"))
 
