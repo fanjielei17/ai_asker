@@ -10,16 +10,19 @@ import (
 )
 
 // openapi completion
-func Cmpl() {
+func Cmpl(instruct string) {
 
+	if strings.TrimSpace(instruct) == "" {
+		instruct = "请输入问题"
+	}
 	client := openai.NewClient(os.Getenv("OPENAI_API_KEY"))
 	messages := []openai.ChatCompletionMessage{
-		{Role: openai.ChatMessageRoleSystem, Content: "请问，中文是什么意思"},
+		{Role: openai.ChatMessageRoleSystem, Content: instruct},
 	}
 
 	// 获取用户输入
 	reader := bufio.NewReader(os.Stdin) // 读取标准输入
-	fmt.Println("请问，中文是什么意思：press Ctrl+D to finish")
+	fmt.Println(instruct + "\npress Ctrl+D to finish")
 
 	var question strings.Builder
 	for {
